@@ -8,7 +8,7 @@ const Header = () => {
   // console.log(isLoggedIn);
 
   return (
-    <div className="bg-blue-800 py-6">
+    <div className="bg-blue-800 py-6 ">
       <div className="container mx-auto flex justify-between">
         <span className="text-3xl text-white font-bold tracking-tight">
           <Link to={"/"}>Rental.com</Link>

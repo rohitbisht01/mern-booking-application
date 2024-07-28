@@ -4,17 +4,17 @@ Welcome to the MERN stack booking application! This application allows users to 
 
 ## Tech Stack
 
-- **TypeScript**
-- **TailwindCSS**
-- **React**
-- **Node.js**
-- **Express**
-- **MongoDB**
-- **React Hook Form**
-- **React Query**
-- **Stripe Payment**
-- **Cloudinary**
-- **End-to-End Testing**
+- TypeScript
+- TailwindCSS
+- React
+- Node.js
+- Express
+- MongoDB
+- React Hook Form
+- React Query
+- Stripe Payment
+- Cloudinary
+- End-to-End Testing
 
 ## Features
 

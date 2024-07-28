@@ -88,7 +88,7 @@ const SignIn = () => {
         </span>
         <button
           type="submit"
-          className="bg-blue-600 text-white p-2 font-medium rounded-lg hover:bg-blue-500 text-lg"
+          className="bg-blue-600 text-white p-2 font-medium rounded-lg hover:bg-blue-500 text-sm"
         >
           Login
         </button>

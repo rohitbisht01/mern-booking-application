@@ -1,11 +1,20 @@
 import express from "express";
 import path from "path";
 import cors from "cors";
+import cookieParser from "cookie-parser";
+import { v2 as cloudinary } from "cloudinary";
 import "dotenv/config";
 import mongoose from "mongoose";
+
 import userRoutes from "./routes/users";
-import cookieParser from "cookie-parser";
+import myHotelRoutes from "./routes/my-hotels";
 import authRoutes from "./routes/auth";
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 const PORT = process.env.PORT;
 
@@ -26,6 +35,7 @@ app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 
 app.use("/api/auth/", authRoutes);
 app.use("/api/users/", userRoutes);
+app.use("/api/my-hotels/", myHotelRoutes);
 
 app.listen(PORT, () => {
   console.log(`server running on localhost:${PORT}`);
