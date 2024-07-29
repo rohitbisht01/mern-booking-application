@@ -26,6 +26,8 @@ type ManageHotelFormProps = {
 };
 
 const ManageHotelForm = ({ onSave, isLoading }: ManageHotelFormProps) => {
+  console.log(isLoading);
+
   const formMethods = useForm<HotelFormData>();
   const { handleSubmit } = formMethods;
 
@@ -63,11 +65,12 @@ const ManageHotelForm = ({ onSave, isLoading }: ManageHotelFormProps) => {
         <ImagesSection />
         <span className="flex justify-end">
           <button
-            disabled={isLoading}
+            // disabled={isLoading}
             className="bg-blue-600 text-white p-2 font-medium rounded-lg hover:bg-blue-500 text-sm disabled:bg-gray-500"
             type="submit"
           >
-            {isLoading ? "Saving..." : "Save"}
+            Save
+            {/* {isLoading ? "Saving..." : "Save"} */}
           </button>
         </span>
       </form>
