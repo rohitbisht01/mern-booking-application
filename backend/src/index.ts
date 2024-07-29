@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import path from "path";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -36,6 +36,11 @@ app.use(express.static(path.join(__dirname, "../../frontend/dist")));
 app.use("/api/auth/", authRoutes);
 app.use("/api/users/", userRoutes);
 app.use("/api/my-hotels/", myHotelRoutes);
+
+// Catch all route
+app.get("*", (req: Request, res: Response) => {
+  res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`server running on localhost:${PORT}`);
